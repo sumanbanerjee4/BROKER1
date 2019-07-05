@@ -1,0 +1,41 @@
+<h3>Create Advertisement</h3>
+<div [hidden]="submitted" style="width: 300px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" required [(ngModel)]="advertisement.name" name="name">
+    </div>
+ 
+    <div class="form-group">
+      <label for="age">Area</label>
+      <input type="text" class="form-control" id="area" required [(ngModel)]="advertisement.area" name="area">
+    </div>
+
+    <div class="form-group">
+        <label for="age">Pin Code</label>
+        <input type="text" class="form-control" id="pinCode" required [(ngModel)]="advertisement.pinCode" name="pinCode">
+      </div>
+
+      <div class="form-group">
+          <label for="age">State</label>
+          <input type="text" class="form-control" id="state" required [(ngModel)]="advertisement.state" name="state">
+        </div>
+
+        <div class="form-group">
+            <label for="age">Property Type</label>
+            <input type="text" class="form-control" id="area" required [(ngModel)]="advertisement.propertyType" name="propertyType">
+          </div>
+
+          <div class="form-group">
+              <label for="age">Post Date</label>
+              <input type="text" class="form-control" id="postDate" required [(ngModel)]="advertisement.postDate" name="postDate">
+            </div>
+ 
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+ 
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+  <button class="btn btn-success" (click)="newAdvertisement()">Add</button>
+</div>

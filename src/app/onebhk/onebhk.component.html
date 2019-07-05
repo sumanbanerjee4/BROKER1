@@ -1,0 +1,164 @@
+<html>
+ 
+<head>
+ 
+<title>HTML Table</title>
+ 
+</head>
+ 
+<body>
+ 
+<form method="" action=""  #f="ngForm" (ngSubmit)= "f.form.valid && onSubmit()">
+ 
+<table border="1" align="center" width="400" bgcolor= "#CCCCCC" >
+ 
+<caption>Registration form</caption>
+ 
+<tr>
+ <th for="propertyName">Enter your property name</th>
+ 
+<td><input type="text"  name="fn" id="fn1" maxlength="10" title="enter your property name" 
+    placeholder="enter your property name"
+     name="propertyName" [(ngModel)]="model.propertyName" 
+    #propertyName='ngModel'></td></tr>
+     <div *ngIf="f.Submitted && propertyName.invalid">
+         <div *ngIf="propertyName.error.required">property name required</div>
+    maxlength="10" title="enter your property name" placeholder="enter your property name"
+       required/>
+     
+     
+
+
+</div>
+ 
+<tr>
+ 
+<th>Enter your property address</th>
+ 
+<td><input type="text" required/></td>
+ 
+</tr>
+ 
+<tr>
+ 
+<th>Enter your property type</th>
+ 
+<td><input type="text" required/></td>
+ 
+</tr>
+ 
+<tr>
+ 
+<th> Enter owner name</th>
+<td><input type="text" required/></td>
+ 
+</tr>
+ 
+
+ 
+<tr>
+ 
+<th>Enter your email</th>
+ 
+<td><input type="email" required/></td>
+ 
+</tr>
+ 
+<tr>
+ 
+<th>Enter your mobile</th>
+ 
+<td><input type="number" required/></td>
+ 
+</tr>
+ 
+<tr>
+ 
+<th>Enter your address</th>
+ 
+<td><textarea rows="8" cols="20" required></textarea></td>
+ 
+</tr>
+ 
+<tr>
+ 
+<th>Select your gender</th>
+ 
+<td>
+ 
+male<input type="radio" name="g" value="m"/>
+female<input type="radio" name="g" value="f"/>
+ 
+</td>
+ 
+</tr>
+ 
+<tr>
+ 
+<!-- <th>Select your hobbies</th>
+ 
+<td>
+ 
+hobby1<input type="checkbox" name="x[]" value="h"/>
+hobby2<input type="checkbox" name="x[]" value="h2"/>
+hobby3<input type="checkbox" name="x[]" value="h3"/>
+ 
+</td> -->
+ 
+</tr>
+ 
+<!-- <tr>
+ 
+<th>Select your DOB</th>
+ 
+<td><input type="date"/></td>
+ 
+</tr> -->
+ 
+<tr>
+ 
+<th>Select your Country</th>
+ 
+<td>
+ 
+<select name="country">
+ 
+<option value="" selected="selected" disabled="disabled">Select your country</option>
+ 
+<option value="1">India</option>
+ 
+<option value="2">Pakistan</option>
+ 
+</select>
+ 
+</td>
+ 
+</tr>
+ 
+<tr>
+ 
+<th>Upload your pic</th>
+ 
+<td><input type="file"/></td>
+ 
+</tr>
+ 
+<tr>
+ 
+<td colspan="2" align="center"><input type="submit" value="Save My Data"/>
+ 
+<input type="reset" value="Reset Data"/>
+<button>submit</button>
+ 
+</td>
+ 
+</tr>
+ 
+</table>
+ 
+</form>
+ 
+</body>
+ 
+</html>
+

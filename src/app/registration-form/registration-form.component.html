@@ -1,0 +1,165 @@
+<html>
+ 
+<head>
+ 
+<title>HTML Table</title>
+ 
+</head>
+ 
+<body>
+ 
+<form method="" action=""  #f="ngForm" (ngSubmit)= "f.form.valid && onSubmit()">
+ 
+<table border="1" align="center" width="400" bgcolor= "#CCCCCC" >
+ 
+<caption style="color:violet;">Registration form</caption>
+
+ 
+<tr>
+ <th for="propertyName" style="color:red;">Enter your property name</th>
+ 
+<td><input type="text"  name="fn" id="fn1" maxlength="10" title="enter your property name" 
+    placeholder="enter your property name"
+     name="propertyName" [(ngModel)]="model.propertyName" 
+    #propertyName='ngModel'></td></tr>
+     <div *ngIf="f.Submitted && propertyName.invalid">
+         <div *ngIf="propertyName.error.required">property name required</div>
+    maxlength="10" title="enter your property name" placeholder="enter your property name"
+       required/>
+     
+     
+
+
+</div>
+ 
+<tr>
+ 
+<th style="color:red;">Enter your property address</th>
+ 
+<td><input type="text" required/></td>
+ 
+</tr>
+ 
+<tr>
+ 
+<th style="color:red;">Enter your property type</th>
+ 
+<td><input type="text" required/></td>
+ 
+</tr>
+ 
+<tr>
+ 
+<th style="color:red;"> Enter owner name</th>
+<td><input type="text" required/></td>
+ 
+</tr>
+ 
+
+ 
+<tr>
+ 
+<th style="color:red;">Enter your email</th>
+ 
+<td><input type="email" required/></td>
+ 
+</tr>
+ 
+<tr>
+ 
+<th style="color:red;">Enter your mobile</th>
+ 
+<td><input type="number" required/></td>
+ 
+</tr>
+ 
+<tr>
+ 
+<th style="color:red;">Enter your address</th>
+ 
+<td><textarea rows="8" cols="20" required></textarea></td>
+ 
+</tr>
+ 
+<tr>
+ 
+<th style="color:red;">Select your gender</th>
+ 
+<td>
+ 
+male<input type="radio" name="g" value="m"/>
+female<input type="radio" name="g" value="f"/>
+ 
+</td>
+ 
+</tr>
+ 
+<tr>
+ 
+<!-- <th>Select your hobbies</th>
+ 
+<td>
+ 
+hobby1<input type="checkbox" name="x[]" value="h"/>
+hobby2<input type="checkbox" name="x[]" value="h2"/>
+hobby3<input type="checkbox" name="x[]" value="h3"/>
+ 
+</td> -->
+ 
+</tr>
+ 
+<!-- <tr>
+ 
+<th>Select your DOB</th>
+ 
+<td><input type="date"/></td>
+ 
+</tr> -->
+ 
+<tr>
+ 
+<th style="color:red;">Select your Country</th>
+ 
+<td>
+ 
+<select name="country">
+ 
+<option value="" selected="selected" disabled="disabled" style="color:blueviolet;">Select your country</option>
+ 
+<option value="1">India</option>
+ 
+<option value="2">Pakistan</option>
+ 
+</select>
+ 
+</td>
+ 
+</tr>
+ 
+<tr>
+ 
+<th style="color:red;">Upload your pic</th>
+ 
+<td><input type="file"/></td>
+ 
+</tr>
+ 
+<tr>
+ 
+<td colspan="2" align="center"><input type="submit" style="color:green;" value="Save My Data"/>
+ 
+<input type="reset" style="color:green;" value="Reset Data"/>
+<button style="color:green;">submit</button>
+ 
+</td>
+ 
+</tr>
+ 
+</table>
+ 
+</form>
+ 
+</body>
+
+ 
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html lang = "en">
+  <head>
+    <title >HOME PAGE</title>
+    <meta charset = "UTF-8" />
+  </head>
+  <body>
+    
+        <div class="header" align="left">
+                <a routerLink="/advertisement" class="logo">Advertisements</a><br><br>
+                <div class="header-right">
+                  <a class="active" href="#home">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                  
+                  <a routerLink="/contact">Contact</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                  <a routerLink="/about">About</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                  <button class="btn login" (click)='toogleLinks()' style="color:red;">open</button>
+                  <button class="btn login" (click)='close()' style="color:red;">close</button>
+
+                  
+                  
+                  <div align="right" *ngIf ="linkList">
+                       
+                      <button class="btn signup" routerLink="/login" style="color:red;">LOGIN</button>&nbsp;&nbsp;
+                        <button class="btn signup"  style="color:red;">SIGN UP</button>&nbsp;&nbsp;
+                       
+                        <button class="btn for property owners"  style="color:red;">FOR PROPERTY OWNERS</button>&nbsp;&nbsp;
+                        <button class="btn default" style="color:red;">DEFAULT</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button class="btn menu" *ngIf="linkList"(click)='toggleLinks()'close link style="color:red;">MENU</button>&nbsp;&nbsp;
+                        </div>
+
+                        <div align="left" >
+                       
+                            <button class="btn onebhk" routerLink="/onebhk" style="color:red;">Rent 1 bhk</button>&nbsp;&nbsp;
+                              <button class="btn twobhk"  style="color:red;">Rent 2 bhk</button>&nbsp;&nbsp;
+                             
+                              <button class="btn threebhk"  style="color:red;">Rent 3 bhk</button>&nbsp;&nbsp;
+                              <button class="btn fourbhk" style="color:red;">Rent 4 bhk</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                             
+                              </div>
+
+
+                </div>
+                
+              </div>
+              
+        
+    <h1  style="color:green;">HOME PAGE</h1>
+    
+                 
+    <form>
+
+       <fieldset>
+          <legend >Property Types</legend>
+          <p>
+             
+             <label>Select Properties</label>
+             <select id = "myList">
+               <option value = "1" style="color:blue;">To Rent</option>
+               <option value = "2"style="color:red;">To Buy</option>
+               <option value = "3" style="color:green;">To Sell</option>
+               
+             </select>
+            
+          </p>
+       </fieldset>
+    </form>
+  </body>
+</html>
+
+

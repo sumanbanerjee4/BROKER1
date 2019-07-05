@@ -1,0 +1,29 @@
+<div *ngIf="advertisement">
+    <div>
+      <label>Name: </label> {{advertisement.name}}
+    </div>
+
+    <div>
+        <label>State: </label> {{advertisement.state}}
+      </div>
+    <div>
+      <label>Area: </label> {{advertisement.area}}
+    </div>
+    <div>
+        <label>PinCode: </label> {{advertisement.pinCode}}
+      </div>
+      <div>
+          <label>PropertyType: </label> {{advertisement.propertyType}}
+        </div>
+    <div>
+      <label>Active: </label> {{advertisement.active}}
+    </div>
+   
+    <span class="button is-small btn-primary" *ngIf='advertisement.active' (click)='updateActive(false)'>Inactive</span>
+   
+    <span class="button is-small btn-primary" *ngIf='!advertisement.active' (click)='updateActive(true)'>Active</span>
+   
+    <span class="button is-small btn-danger" (click)='deleteAdvertisement()'>Delete</span>
+   
+    <hr/>
+  </div>

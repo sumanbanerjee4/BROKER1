@@ -1,0 +1,9 @@
+<h1>Advertisements</h1>
+ 
+<div *ngFor="let advertisement of advertisements | async" style="width: 300px;">
+  <advertisement-details [advertisement]='advertisement'></advertisement-details>
+</div>
+ 
+<div>
+  <button type="button" class="button btn-danger" (click)='deleteAdvertisements()'>Delete All</button>
+</div>
